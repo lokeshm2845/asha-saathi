@@ -19,7 +19,18 @@ from pydantic import BaseModel
 
 ROOT = Path(__file__).resolve().parent.parent
 ON_VERCEL = bool(os.environ.get("VERCEL"))
-PG_URL = os.environ.get("DATABASE_URL") or os.environ.get("POSTGRES_URL")
+def _postgres_url():
+    # Neon / Vercel Postgres set DATABASE_URL or POSTGRES_URL, or <PREFIX>_URL if a custom prefix was chosen.
+    for key in ("DATABASE_URL", "POSTGRES_URL"):
+        if os.environ.get(key):
+            return os.environ[key]
+    for key, val in sorted(os.environ.items()):
+        if key.endswith("_URL") and "UNPOOLED" not in key and val.startswith(("postgres://", "postgresql://")):
+            return val
+    return None
+
+
+PG_URL = _postgres_url()
 SEED = os.environ.get("SEED_DEMO", "1" if ON_VERCEL else "0") == "1"
 # Vercel functions can only write to /tmp, and that disk is temporary.
 DB = Path(os.environ.get("DB_PATH", "/tmp/asha_saathi.db" if ON_VERCEL else ROOT / "data" / "asha_saathi.db"))
