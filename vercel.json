@@ -1,38 +1,9 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "functions": {
-    "api/index.py": {
-      "includeFiles": "backend/**"
-    }
+    "api/index.py": { "includeFiles": "{backend,web}/**" }
   },
   "rewrites": [
-    {
-      "source": "/api/:rest*",
-      "destination": "/api/index?__path=:rest*"
-    },
-    {
-      "source": "/",
-      "destination": "/web/index.html"
-    },
-    {
-      "source": "/app",
-      "destination": "/web/app/index.html"
-    },
-    {
-      "source": "/app/",
-      "destination": "/web/app/index.html"
-    },
-    {
-      "source": "/dashboard",
-      "destination": "/web/dashboard/index.html"
-    },
-    {
-      "source": "/dashboard/",
-      "destination": "/web/dashboard/index.html"
-    },
-    {
-      "source": "/:path((?!web/).*)",
-      "destination": "/web/:path"
-    }
+    { "source": "/:path*", "destination": "/api/index?__path=:path*" }
   ]
 }

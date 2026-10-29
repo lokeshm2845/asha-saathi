@@ -14,7 +14,6 @@ from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
 from fastapi import FastAPI, HTTPException
-from fastapi.responses import RedirectResponse
 from fastapi.staticfiles import StaticFiles
 from pydantic import BaseModel
 
@@ -201,11 +200,6 @@ def health():
     return {"ok": True, "database": "postgres" if PG_URL else ("sqlite-tmp" if ON_VERCEL else "sqlite"), "seedDemo": SEED}
 
 
-@app.get("/")
-def root():
-    return RedirectResponse("/dashboard/")
-
-
-# On Vercel the static files are served by the CDN (see vercel.json), not by this app.
+# Serves the landing page, ASHA app (/app/) and dashboard (/dashboard/); on Vercel too (see vercel.json).
 if (ROOT / "web").is_dir():
     app.mount("/", StaticFiles(directory=ROOT / "web", html=True), name="web")
