@@ -196,6 +196,11 @@ def reset():
     return {"ok": True}
 
 
+@app.get("/api/health")
+def health():
+    return {"ok": True, "database": "postgres" if PG_URL else ("sqlite-tmp" if ON_VERCEL else "sqlite"), "seedDemo": SEED}
+
+
 @app.get("/")
 def root():
     return RedirectResponse("/dashboard/")
