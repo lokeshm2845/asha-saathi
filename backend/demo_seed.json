@@ -1,0 +1,380 @@
+[
+ {
+  "asha": {
+   "id": "ASHA-2101",
+   "name": "Mangala Bhil",
+   "village": "Wathode",
+   "phc": "Kharde Bk PHC (demo)"
+  },
+  "beneficiaries": [
+   {
+    "id": "mvt7hl882sdto3kbgca",
+    "type": "pregnant",
+    "name": "Lata Pawara",
+    "village": "Wathode",
+    "age": 19,
+    "gestWeeks": 32,
+    "heightCm": 150
+   },
+   {
+    "id": "mvt7hl8azks7oll445n",
+    "type": "pregnant",
+    "name": "Sarika Bhil",
+    "village": "Wathode",
+    "age": 26,
+    "gestWeeks": 22,
+    "heightCm": 156
+   },
+   {
+    "id": "mvt7hl8b5ygvx34529y",
+    "type": "child",
+    "name": "Rohan (s/o Lata)",
+    "village": "Wathode",
+    "ageMonths": 22
+   }
+  ],
+  "visits": [
+   {
+    "id": "mvt7hl89b7celv5nklf",
+    "beneficiaryId": "mvt7hl882sdto3kbgca",
+    "createdAt": "2026-10-29T02:12:39.609Z",
+    "hoursAgo": 5,
+    "transcript": "आठ महीने, हीमोग्लोबिन 6.8, सांस फूलती है",
+    "fields": {
+     "raw": "आठ महीने, हीमोग्लोबिन 6.8, सांस फूलती है",
+     "gestWeeks": 34,
+     "months": 8,
+     "hb": 6.8,
+     "breathless": true
+    },
+    "level": "RED",
+    "reasons": [
+     {
+      "level": "RED",
+      "code": "HB_SEVERE",
+      "en": "Severe anaemia (Hb 6.8 g/dL < 7)",
+      "hi": "गंभीर खून की कमी (Hb 6.8)"
+     },
+     {
+      "level": "RED",
+      "code": "BREATHLESS",
+      "en": "Breathlessness",
+      "hi": "सांस फूलना"
+     }
+    ],
+    "action": {
+     "en": "Refer to PHC today. Arrange 108/102 ambulance if needed. Medical Officer alerted.",
+     "hi": "आज ही PHC रेफर करें। ज़रूरत हो तो 108/102 एम्बुलेंस बुलाएँ।",
+     "followUpDays": 1
+    }
+   },
+   {
+    "id": "mvt7hl8bs73wpjufi3d",
+    "beneficiaryId": "mvt7hl8azks7oll445n",
+    "createdAt": "2026-10-28T11:12:39.611Z",
+    "hoursAgo": 20,
+    "transcript": "5 mahine, BP 112/72, Hb 11.4",
+    "fields": {
+     "raw": "5 mahine, BP 112/72, Hb 11.4",
+     "gestWeeks": 22,
+     "months": 5,
+     "bpSys": 112,
+     "bpDia": 72,
+     "hb": 11.4
+    },
+    "level": "GREEN",
+    "reasons": [],
+    "action": {
+     "en": "Routine care: continue IFA, nutrition and next scheduled visit.",
+     "hi": "सामान्य देखभाल: आयरन गोली, पोषण, अगली विज़िट।",
+     "followUpDays": 30
+    }
+   },
+   {
+    "id": "mvt7hl8b0oialqt9k92c",
+    "beneficiaryId": "mvt7hl8b5ygvx34529y",
+    "createdAt": "2026-10-29T04:12:39.611Z",
+    "hoursAgo": 3,
+    "transcript": "MUAC 11.0 cm, pairon mein sujan",
+    "fields": {
+     "raw": "MUAC 11.0 cm, pairon mein sujan",
+     "muacCm": 11,
+     "swelling": true
+    },
+    "level": "RED",
+    "reasons": [
+     {
+      "level": "RED",
+      "code": "SAM_MUAC",
+      "en": "Severe acute malnutrition (MUAC 11 cm < 11.5)",
+      "hi": "गंभीर कुपोषण (MUAC 11 सेमी)"
+     },
+     {
+      "level": "RED",
+      "code": "OEDEMA",
+      "en": "Swelling of both feet (oedema): SAM sign",
+      "hi": "दोनों पैरों में सूजन – गंभीर कुपोषण"
+     }
+    ],
+    "action": {
+     "en": "Refer to PHC today. Arrange 108/102 ambulance if needed. Medical Officer alerted.",
+     "hi": "आज ही PHC रेफर करें। ज़रूरत हो तो 108/102 एम्बुलेंस बुलाएँ।",
+     "followUpDays": 1
+    }
+   }
+  ]
+ },
+ {
+  "asha": {
+   "id": "ASHA-2102",
+   "name": "Sangita Patil",
+   "village": "Arthe",
+   "phc": "Kharde Bk PHC (demo)"
+  },
+  "beneficiaries": [
+   {
+    "id": "mvt7hl8b7pnxw19yzjx",
+    "type": "pregnant",
+    "name": "Manisha Koli",
+    "village": "Arthe",
+    "age": 37,
+    "gestWeeks": 28,
+    "heightCm": 154,
+    "prevCsection": true
+   },
+   {
+    "id": "mvt7hl8bormgsgs8od",
+    "type": "pregnant",
+    "name": "Jyoti Sonawane",
+    "village": "Arthe",
+    "age": 23,
+    "gestWeeks": 36,
+    "heightCm": 158
+   },
+   {
+    "id": "mvt7hl8b3fz5ryvj0k4",
+    "type": "child",
+    "name": "Pari (d/o Jyoti)",
+    "village": "Arthe",
+    "ageMonths": 14
+   },
+   {
+    "id": "mvt7hl8bdzvwpwvu2qt",
+    "type": "child",
+    "name": "Om (s/o Manisha)",
+    "village": "Arthe",
+    "ageMonths": 40
+   }
+  ],
+  "visits": [
+   {
+    "id": "mvt7hl8bvvsujbs3038",
+    "beneficiaryId": "mvt7hl8b7pnxw19yzjx",
+    "createdAt": "2026-10-28T01:12:39.611Z",
+    "hoursAgo": 30,
+    "transcript": "7 mahine, BP 128/84, Hb 9.6",
+    "fields": {
+     "raw": "7 mahine, BP 128/84, Hb 9.6",
+     "gestWeeks": 30,
+     "months": 7,
+     "bpSys": 128,
+     "bpDia": 84,
+     "hb": 9.6
+    },
+    "level": "AMBER",
+    "reasons": [
+     {
+      "level": "AMBER",
+      "code": "HB_MODERATE",
+      "en": "Moderate anaemia (Hb 9.6 g/dL)",
+      "hi": "खून की कमी (Hb 9.6) – IFA व जाँच"
+     },
+     {
+      "level": "AMBER",
+      "code": "AGE_HIGH",
+      "en": "Age above 35 (37)",
+      "hi": "35 से अधिक उम्र (37)"
+     },
+     {
+      "level": "AMBER",
+      "code": "PREV_CS",
+      "en": "Previous C-section",
+      "hi": "पहले ऑपरेशन से डिलीवरी"
+     }
+    ],
+    "action": {
+     "en": "Inform ANM; visit sub-centre / VHSND within 3 days. Follow up at home.",
+     "hi": "ANM को बताएँ; 3 दिन में उप-केंद्र / VHSND पर जाँच।",
+     "followUpDays": 3
+    }
+   },
+   {
+    "id": "mvt7hl8bdmq1jkjo05",
+    "beneficiaryId": "mvt7hl8bormgsgs8od",
+    "createdAt": "2026-10-29T05:12:39.611Z",
+    "hoursAgo": 2,
+    "transcript": "नऊ महिने, बाळाची हालचाल कमी, बीपी 120/80",
+    "fields": {
+     "raw": "नऊ महिने, बाळाची हालचाल कमी, बीपी 120/80",
+     "gestWeeks": 39,
+     "months": 9,
+     "bpSys": 120,
+     "bpDia": 80,
+     "reducedMovement": true
+    },
+    "level": "RED",
+    "reasons": [
+     {
+      "level": "RED",
+      "code": "FETAL_MOVEMENT",
+      "en": "Reduced fetal movement",
+      "hi": "बच्चे का हिलना कम"
+     }
+    ],
+    "action": {
+     "en": "Refer to PHC today. Arrange 108/102 ambulance if needed. Medical Officer alerted.",
+     "hi": "आज ही PHC रेफर करें। ज़रूरत हो तो 108/102 एम्बुलेंस बुलाएँ।",
+     "followUpDays": 1
+    }
+   },
+   {
+    "id": "mvt7hl8bn37dkgdvmd",
+    "beneficiaryId": "mvt7hl8b3fz5ryvj0k4",
+    "createdAt": "2026-10-28T05:12:39.611Z",
+    "hoursAgo": 26,
+    "transcript": "muac 12.1, dast",
+    "fields": {
+     "raw": "muac 12.1, dast",
+     "muacCm": 12.1,
+     "diarrhoea": true
+    },
+    "level": "AMBER",
+    "reasons": [
+     {
+      "level": "AMBER",
+      "code": "MAM_MUAC",
+      "en": "Moderate acute malnutrition (MUAC 12.1 cm)",
+      "hi": "मध्यम कुपोषण (MUAC 12.1 सेमी)"
+     },
+     {
+      "level": "AMBER",
+      "code": "DIARRHOEA",
+      "en": "Diarrhoea: give ORS + zinc, watch for dehydration",
+      "hi": "दस्त – ORS और जिंक दें"
+     }
+    ],
+    "action": {
+     "en": "Inform ANM; visit sub-centre / VHSND within 3 days. Follow up at home.",
+     "hi": "ANM को बताएँ; 3 दिन में उप-केंद्र / VHSND पर जाँच।",
+     "followUpDays": 3
+    }
+   },
+   {
+    "id": "mvt7hl8b6s1bpis2gkx",
+    "beneficiaryId": "mvt7hl8bdzvwpwvu2qt",
+    "createdAt": "2026-10-27T05:12:39.611Z",
+    "hoursAgo": 50,
+    "transcript": "MUAC 14.0, vajan 13 kg",
+    "fields": {
+     "raw": "MUAC 14.0, vajan 13 kg",
+     "muacCm": 14,
+     "weightKg": 13
+    },
+    "level": "GREEN",
+    "reasons": [],
+    "action": {
+     "en": "Routine care: continue IFA, nutrition and next scheduled visit.",
+     "hi": "सामान्य देखभाल: आयरन गोली, पोषण, अगली विज़िट।",
+     "followUpDays": 30
+    }
+   }
+  ]
+ },
+ {
+  "asha": {
+   "id": "ASHA-2103",
+   "name": "Rekha Valvi",
+   "village": "Holnanthe",
+   "phc": "Kharde Bk PHC (demo)"
+  },
+  "beneficiaries": [
+   {
+    "id": "mvt7hl8brwztjo1uptj",
+    "type": "pregnant",
+    "name": "Kamal Valvi",
+    "village": "Holnanthe",
+    "age": 21,
+    "gestWeeks": 16,
+    "heightCm": 143
+   },
+   {
+    "id": "mvt7hl8c3em6tjirbn9",
+    "type": "pregnant",
+    "name": "Priya Gavit",
+    "village": "Holnanthe",
+    "age": 25,
+    "gestWeeks": 30,
+    "heightCm": 157
+   }
+  ],
+  "visits": [
+   {
+    "id": "mvt7hl8b6mez2hy90q",
+    "beneficiaryId": "mvt7hl8brwztjo1uptj",
+    "createdAt": "2026-10-27T11:12:39.611Z",
+    "hoursAgo": 44,
+    "transcript": "4 mahine, BP 110/70, Hb 10.2",
+    "fields": {
+     "raw": "4 mahine, BP 110/70, Hb 10.2",
+     "gestWeeks": 17,
+     "months": 4,
+     "bpSys": 110,
+     "bpDia": 70,
+     "hb": 10.2
+    },
+    "level": "AMBER",
+    "reasons": [
+     {
+      "level": "AMBER",
+      "code": "SHORT",
+      "en": "Height 143 cm (< 145)",
+      "hi": "कद 145 सेमी से कम"
+     },
+     {
+      "level": "GREEN",
+      "code": "HB_MILD",
+      "en": "Mild anaemia (Hb 10.2): IFA daily, diet advice",
+      "hi": "हल्की खून की कमी – रोज़ आयरन गोली"
+     }
+    ],
+    "action": {
+     "en": "Inform ANM; visit sub-centre / VHSND within 3 days. Follow up at home.",
+     "hi": "ANM को बताएँ; 3 दिन में उप-केंद्र / VHSND पर जाँच।",
+     "followUpDays": 3
+    }
+   },
+   {
+    "id": "mvt7hl8czmnm1wd82d",
+    "beneficiaryId": "mvt7hl8c3em6tjirbn9",
+    "createdAt": "2026-10-28T23:12:39.612Z",
+    "hoursAgo": 8,
+    "transcript": "7 mahine, BP 118/78, Hb 11.9, sab theek",
+    "fields": {
+     "raw": "7 mahine, BP 118/78, Hb 11.9, sab theek",
+     "gestWeeks": 30,
+     "months": 7,
+     "bpSys": 118,
+     "bpDia": 78,
+     "hb": 11.9
+    },
+    "level": "GREEN",
+    "reasons": [],
+    "action": {
+     "en": "Routine care: continue IFA, nutrition and next scheduled visit.",
+     "hi": "सामान्य देखभाल: आयरन गोली, पोषण, अगली विज़िट।",
+     "followUpDays": 30
+    }
+   }
+  ]
+ }
+]
