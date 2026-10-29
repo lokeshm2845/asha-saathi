@@ -1,7 +1,9 @@
-# Vercel serverless entry point: exposes the FastAPI app for /api/* routes.
-import json
+# Vercel serverless entry point for the FastAPI app.
+# vercel.json rewrites /api/<rest> to /api/index?__path=<rest>; Vercel then hands the app the path
+# "/api/index", so the original path is restored here before FastAPI routes the request.
 import sys
 from pathlib import Path
+from urllib.parse import parse_qsl, urlencode
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
@@ -9,12 +11,11 @@ from backend.main import app as fastapi_app  # noqa: E402
 
 
 async def app(scope, receive, send):
-    # TEMPORARY routing diagnostics: ?_debug=1 shows what Vercel passes to the app.
-    if scope["type"] == "http" and b"_debug=1" in scope.get("query_string", b""):
-        info = {k: str(scope.get(k)) for k in ("path", "raw_path", "root_path", "query_string")}
-        info["headers"] = {k.decode(): v.decode() for k, v in scope["headers"] if k.startswith(b"x-") and b"auth" not in k}
-        body = json.dumps(info, indent=1).encode()
-        await send({"type": "http.response.start", "status": 200, "headers": [(b"content-type", b"application/json")]})
-        await send({"type": "http.response.body", "body": body})
-        return
+    if scope["type"] == "http" and scope["path"].rstrip("/") == "/api/index":
+        query = parse_qsl(scope.get("query_string", b"").decode(), keep_blank_values=True)
+        rest = next((v for k, v in query if k == "__path"), None)
+        if rest is not None:
+            path = "/api/" + rest.lstrip("/")
+            scope = dict(scope, path=path, raw_path=path.encode(),
+                         query_string=urlencode([(k, v) for k, v in query if k != "__path"]).encode())
     await fastapi_app(scope, receive, send)
